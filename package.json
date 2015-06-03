@@ -1,6 +1,6 @@
 {
   "name": "superdocker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Superdocker allows you to manage multiple docker configurations easily",
   "bin": "bin/superdocker.js",
   "repository": {
