@@ -27,7 +27,7 @@ Read more: https://docs.npmjs.com/getting-started/updating-global-packages
 
 You'll need to create a config file in your home directory:
 
-    touch .superdocker
+    touch ~/.superdocker
 
 In this, place your configuration:
 
