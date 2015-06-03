@@ -15,6 +15,14 @@ Install via npm:
 
     npm i superdocker -g
 
+## Upgrading
+
+To upgrade all global packages, use this:
+
+    npm outdated -g --depth=0.
+
+Read more: https://docs.npmjs.com/getting-started/updating-global-packages
+
 ## Create a config file
 
 You'll need to create a config file in your home directory:
