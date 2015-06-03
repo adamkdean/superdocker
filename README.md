@@ -37,12 +37,11 @@ In this, place your configuration:
         DOCKER_HOST=tcp://192.168.59.103:2376
 
     [local]
-        DOCKER_TLS_VERIFY=0
-        DOCKER_HOST=tcp://192.168.10.13:2375
+        DOCKER_HOST=tcp://192.168.1.100:2375
 
     [remote]
-        DOCKER_TLS_VERIFY=0
-        DOCKER_HOST=tcp://10.17.0.1:2375
+        DOCKER_HOST=tcp://swarm.yourhost.com:2375
+
 
 ## Check it's working
 
@@ -72,6 +71,13 @@ You can now run `superdocker <configuration> <commands>`, which is the same as `
     Init SHA1: 7f9c6798b022e64f04d2aff8c75cbf38a2779493
     Init Path: /usr/local/bin/docker
     Docker Root Dir: /mnt/sda1/var/lib/docker
+
+## Troubleshooting
+
+Make sure your docker client version matches your docker server version, or you'll have a bad time.
+
+    $ superdocker remote info
+    FATA[0000] Error response from daemon: client and server don't have same version (client : 1.18, server: 1.14)
 
 ## Licence
 

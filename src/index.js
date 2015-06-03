@@ -51,9 +51,8 @@ function superdocker() {
 
 function runCommand(command, args, env) {
     var e = {};
-    extend(e, process.env);
-    extend(e, env);
-    spawn(command, args, { env: env, stdio: [process.stdin, process.stdout, process.stderr]});
+    extend(e, process.env, env);
+    spawn(command, args, { env: e, stdio: [process.stdin, process.stdout, process.stderr]});
 }
 
 module.exports = superdocker;
