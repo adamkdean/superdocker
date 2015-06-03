@@ -13,15 +13,17 @@ If you wanted to use your local docker client with each of these, you'd have to 
 
 Install via npm:
 
-    npm i superdocker -g
+    npm i -g superdocker
 
 ## Upgrading
 
-To upgrade all global packages, use this:
+Upgrade via npm also:
 
-    npm outdated -g --depth=0.
+    npm update -g superdocker
 
-Read more: https://docs.npmjs.com/getting-started/updating-global-packages
+Check it's uptodate:
+
+    npm outdated -g --depth=0
 
 ## Create a config file
 
