@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/superdocker.svg)](http://badge.fury.io/js/superdocker)
+
 # superdocker
 
 Superdocker allows you to manage multiple docker hosts easily. This is not for clusters, this is for working with different environments.
