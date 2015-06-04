@@ -30,19 +30,18 @@ function superdocker() {
     if (argv && argv.length > 0) {
         if (argv[0] in superdocker_config) {
             env_vars = superdocker_config[argv[0]];
+            command_args = argv.slice(1);
+        } else if ('default' in superdocker_config) {
+            env_vars = superdocker_config['default'];
+            command_args = argv.slice(0);
         } else {
-            console.log('Error: configuration not found');
+            console.log('Error: no configuration found');
+            console.log('* Please create .superdocker and place your configurations in there');
+            console.log('* See %s for more information', 'http://github.com/adamkdean/superdocker');
             process.exit(1);
         }
     } else {
-        console.log('Error: no configuration specified');
-        process.exit(1);
-    }
-
-    if (argv.length > 1) {
-        command_args = argv.slice(1);
-    } else {
-        console.log('Error: no command specified');
+        console.log('Usage: superdocker <configuration> commands');
         process.exit(1);
     }
 

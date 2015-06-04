@@ -15,6 +15,10 @@ Install via npm:
 
     npm i -g superdocker
 
+Optionally, create a symlink to save you time:
+
+    ln -sf /usr/local/bin/superdocker /usr/local/bin/sdocker
+
 ## Upgrading
 
 Upgrade via npm also:
@@ -44,6 +48,14 @@ In this, place your configuration:
     [remote]
         DOCKER_HOST=tcp://swarm.yourhost.com:2375
 
+Optionally, create a default configuration:
+
+    [default]
+        DOCKER_CERT_PATH=/Users/adam/.boot2docker/certs/boot2docker-vm
+        DOCKER_TLS_VERIFY=1
+        DOCKER_HOST=tcp://192.168.59.103:2376
+
+All that happens is if you type superdocker ps (no configuration), it'll use the default. If you don't provide a configuration, and there is no default, then you'll get a pleasant message telling you as much.
 
 ## Check it's working
 
